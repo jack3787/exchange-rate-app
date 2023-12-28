@@ -1,0 +1,42 @@
+/* App.css */
+body {
+  .app-container {
+    text-align: center;
+    /* 페이지 내용을 가운데 정렬합니다. */
+  }
+
+  .app-title {
+    font-size: 2rem;
+    /* 더 큰 글꼴 크기로 설정 */
+    margin-bottom: 20px;
+    /* 아래 여백을 늘립니다. */
+    color: #333;
+    /* 페이지 제목 색상 */
+  }
+
+  font-family: 'Arial',
+  sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.exchange-rate-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.exchange-rate-info {
+  margin-top: 20px;
+}
+
+h1 {
+  color: #333;
+}

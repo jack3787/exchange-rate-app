@@ -1,0 +1,53 @@
+/* exchangeRate.css */
+.exchange-rate-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.exchange-rate-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+.nation-select-container {
+    margin-bottom: 20px;
+}
+
+.exchange-rate-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.exchange-rate-item {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.currency-label {
+    font-size: 16px;
+}
+
+.rate-value {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.loading-message {
+    font-size: 13px;
+    font-style: italic;
+}
