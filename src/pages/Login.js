@@ -54,6 +54,7 @@ const Login = () => {
       // 로그인 성공 여부에 따라 로직 추가
       const response = await fetch("http://127.0.0.1/user/login", {
         method: "POST",
+        credentials: "include",
         headers: {
           "Content-Type": "application/json",
         },

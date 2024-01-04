@@ -52,6 +52,7 @@ const AccountInfo = () => {
       // 필수 IDT 값 없음
       const response = await fetch("http://127.0.0.1/account/inquiry", {
         method: "POST",
+        credentials: "include",
       });
 
       if (response.status === 200) {
