@@ -1,6 +1,7 @@
 // AccountInfo.js
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import "./UserInfo.css";
 
 const UserInfo = () => {
   const location = useLocation();
@@ -22,8 +23,7 @@ const UserInfo = () => {
 
   const handleUserInfoClick = async () => {
     try {
-      // 여기에서 실제로 API 호출 등을 통해 데이터를 가져오는 로직을 구현해야 합니다.
-      const result = await fetchUserInfo();
+      const result = await fetchUserInfo(); // await를 사용하여 fetchUserInfo()의 결과를 기다린다. ==> 비동기 작업을 동기적으로 다루는 것과 유사한 효과
       setUserInfo({
         userId: userId, // 아이디
         userName: userName, // 사용자명
@@ -54,13 +54,7 @@ const UserInfo = () => {
       // 필수 IDT 값 없음
       const response = await fetch("http://127.0.0.1/user/info", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        // body: JSON.stringify({
-        //   userId: userId,
-        //   password: password,
-        // }),
+        credentials: "include",
       });
 
       if (response.status === 200) {
@@ -79,17 +73,19 @@ const UserInfo = () => {
 
   return (
     <div>
-      <button onClick={handleUserInfoClick}>UserInfo 조회 버튼</button>
+      <button className="userInfo-buttons" onClick={handleUserInfoClick}>
+        UserInfo 조회
+      </button>
 
       {userInfo && (
         <div>
           <h2>UserInfo</h2>
-          <p>아이디: {userInfo.userId}</p>
-          <p>사용자명: {userInfo.userName}</p>
-          <p>패스워드: {userInfo.password}</p>
-          <p>별명: {userInfo.nickName}</p>
-          <p>휴대폰번호: {userInfo.phoneNo}</p>
-          <p>
+          <p>아이디: {userInfo?.userId}</p>
+          <p>사용자명: {userInfo?.userName}</p>
+          <p>패스워드: {userInfo?.password}</p>
+          <p>별명: {userInfo?.nickName}</p>
+          <p>휴대폰번호: {userInfo?.phoneNo}</p>
+          {/* <p>
             계좌목록:{" "}
             {[
               userInfo.acntList.acntName,
@@ -97,8 +93,8 @@ const UserInfo = () => {
               userInfo.acntList.balance,
               userInfo.acntList.blockYn,
             ]}
-          </p>
-          <p>???: {userInfo.cddYn}</p>
+          </p> */}
+          <p>???: {userInfo?.cddYn}</p>
         </div>
       )}
     </div>

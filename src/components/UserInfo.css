@@ -1,0 +1,10 @@
+/* UserInfo.css */
+.userInfo-buttons {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 20px 10px;
+}

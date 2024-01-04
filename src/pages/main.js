@@ -33,10 +33,9 @@ const Main = () => {
       <h1 className="main-title">Main Page</h1>
 
       <div className="main-container">
-        <div>
-          <UserInfo /> {/* userInfo조회 기능추가 */}
-          <div style={{ marginBottom: "20px" }}></div> {/* 간격 조절 */}
-          <AccountInfo /> {/* 계좌조회 기능추가 */}
+        <div className="info-container">
+          <UserInfo />
+          <AccountInfo />
         </div>
         <div className="navigation-buttons">
           <Link to="/exchangeRate">
